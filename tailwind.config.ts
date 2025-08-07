@@ -57,8 +57,8 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				// Brand-specific colors
-				'coral-glow': 'hsl(var(--coral-glow))',
-				'sage-soft': 'hsl(var(--sage-soft))',
+				'logo-blue': 'hsl(var(--logo-blue))',
+				'blue-soft': 'hsl(var(--blue-soft))',
 				'charcoal': 'hsl(var(--charcoal))'
 			},
 			borderRadius: {

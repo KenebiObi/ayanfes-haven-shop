@@ -24,7 +24,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium px-8 py-4 rounded-full coral-glow">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-8 py-4 rounded-full logo-glow">
                 Shop Collection
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
