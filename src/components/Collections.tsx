@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import sneakersImage from "@/assets/sneakers-collection.jpg";
 import resinImage from "@/assets/resin-crafts.jpg";
 import accessoriesImage from "@/assets/accessories-collection.jpg";
@@ -12,19 +13,22 @@ const Collections = () => {
       description: "Trendy and comfortable footwear that makes a statement.",
       image: sneakersImage,
       alt: "Collection of stylish sneakers",
-      featured: true
+      featured: true,
+      path: "/shop/sneakers"
     },
     {
       title: "Resin Crafts",
       description: "Handmade unique pieces that showcase artistry and creativity.",
       image: resinImage,
-      alt: "Beautiful handmade resin crafts and jewelry"
+      alt: "Beautiful handmade resin crafts and jewelry",
+      path: "/shop/resin-crafts"
     },
     {
       title: "Accessories",
       description: "Fashion-forward accessories to complete your bold look.",
       image: accessoriesImage,
-      alt: "Fashion accessories collection"
+      alt: "Fashion accessories collection",
+      path: "/shop/accessories"
     }
   ];
 
@@ -65,14 +69,16 @@ const Collections = () => {
                     <p className="text-white/90 mb-4 text-balance">
                       {collection.description}
                     </p>
-                    <Button 
-                      variant="secondary" 
-                      size="sm" 
-                      className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/30"
-                    >
-                      Explore
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link to={collection.path}>
+                      <Button 
+                        variant="secondary" 
+                        size="sm" 
+                        className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/30"
+                      >
+                        Explore
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </CardContent>
@@ -82,13 +88,15 @@ const Collections = () => {
 
         {/* CTA */}
         <div className="text-center mt-16 fade-in">
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-8 py-4 rounded-full"
-          >
-            View All Products
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Link to="/shop">
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-8 py-4 rounded-full"
+            >
+              View All Products
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
