@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient" />
       
@@ -16,7 +14,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-foreground leading-tight">
               Creative fashion.
               <br />
-              <span className="text-secondary">Bold expression.</span>
+              <span className="text-slate-300">Bold expression.</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-lg mx-auto lg:mx-0 text-balance">
@@ -37,21 +35,17 @@ const Hero = () => {
           {/* Hero Image */}
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden hover-lift">
-              <img
-                src={heroImage}
-                alt="Ayanfe's Haven creative fashion collection featuring sneakers, resin crafts, and accessories"
-                className="w-full h-[500px] lg:h-[600px] object-cover"
-              />
+              <img src={heroImage} alt="Ayanfe's Haven creative fashion collection featuring sneakers, resin crafts, and accessories" className="w-full h-[500px] lg:h-[600px] object-cover" />
             </div>
             
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent rounded-full animate-float opacity-80" />
-            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-secondary rounded-full animate-float opacity-60" style={{ animationDelay: "1s" }} />
+            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-secondary rounded-full animate-float opacity-60" style={{
+            animationDelay: "1s"
+          }} />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
