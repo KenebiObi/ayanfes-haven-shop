@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Collections from "@/components/Collections";
+import TrustBadges from "@/components/TrustBadges";
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
+import SocialMedia from "@/components/SocialMedia";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
@@ -13,8 +14,9 @@ const Index = () => {
       <main>
         <Hero />
         <Collections />
+        <TrustBadges />
         <About />
-        <Testimonials />
+        <SocialMedia />
         <Newsletter />
       </main>
       <Footer />

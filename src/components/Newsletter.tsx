@@ -33,11 +33,10 @@ const Newsletter = () => {
           <div className="space-y-8 fade-in">
             <div>
               <h2 className="text-4xl md:text-5xl font-playfair font-bold text-foreground mb-6">
-                Stay Connected
+                Stay in the Loop
               </h2>
               <p className="text-xl text-muted-foreground text-balance">
-                Join our community and be the first to discover new collections, 
-                exclusive offers, and behind-the-scenes content.
+                Subscribe to get updates on new collections, exclusive offers, and style inspiration.
               </p>
             </div>
 

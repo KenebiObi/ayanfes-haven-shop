@@ -15,23 +15,23 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-foreground leading-tight">
               Creative fashion.
               <br />
-              <span className="text-slate-300">Bold expression.</span>
+              <span className="text-primary">Bold expression.</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-lg mx-auto lg:mx-0 text-balance">
-              Discover unique handmade resin crafts, trendy sneakers, and fashion accessories that tell your story.
+              Step into a new era of urban fashion with our curated collection of statement footwear.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link to="/shop">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-8 py-4 rounded-full logo-glow">
-                  Shop Collection
+                  SHOP NOW
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link to="/#about">
-                <Button variant="outline" size="lg" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 rounded-full">
-                  Our Story
+              <Link to="#collections">
+                <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 rounded-full">
+                  FIND MORE
                 </Button>
               </Link>
             </div>

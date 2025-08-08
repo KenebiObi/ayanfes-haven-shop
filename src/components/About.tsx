@@ -28,21 +28,13 @@ const About = () => {
           <div className="space-y-8 fade-in">
             <div>
               <h2 className="text-4xl md:text-5xl font-playfair font-bold text-foreground mb-6">
-                Ayanfe's Story
+                Where Creativity Meets Style
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p className="text-balance">
-                  Ayanfe's Haven began as a passion project, born from a love for creative expression 
-                  and unique fashion. What started as handmade resin crafts in a small studio has 
-                  grown into a lifestyle brand that celebrates bold, artistic expression.
-                </p>
-                <p className="text-balance">
-                  We believe that fashion is more than clothing—it's a form of self-expression. 
-                  Our carefully curated collection of sneakers, accessories, and handmade resin 
-                  pieces reflects our commitment to creativity, quality, and individuality.
-                </p>
-                <p className="text-balance">
-                  Every item in our collection tells a story, and we're here to help you tell yours.
+                  Ayanfe's Haven was born from a deep passion for self-expression. It's a space where 
+                  the unique art of resin crafting meets the bold world of trendy fashion. Every piece 
+                  is curated or created with the purpose of empowering you to tell your own story.
                 </p>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ShoppingBag, Search, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,29 +12,28 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-playfair font-bold text-foreground">
-              Ayanfe's Haven
-            </h1>
+            <Link to="/">
+              <h1 className="text-2xl font-playfair font-bold text-foreground hover:text-primary transition-colors">
+                Ayanfe's Haven
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#home" className="text-foreground hover:text-secondary transition-colors">
+              <Link to="/" className="text-foreground hover:text-primary transition-colors">
                 Home
-              </a>
-              <a href="#collections" className="text-foreground hover:text-secondary transition-colors">
-                Collections
-              </a>
-              <a href="#about" className="text-foreground hover:text-secondary transition-colors">
+              </Link>
+              <Link to="/shop" className="text-foreground hover:text-primary transition-colors">
+                Shop
+              </Link>
+              <a href="/#about" className="text-foreground hover:text-primary transition-colors">
                 About
               </a>
-              <a href="#testimonials" className="text-foreground hover:text-secondary transition-colors">
-                Reviews
-              </a>
-              <a href="#contact" className="text-foreground hover:text-secondary transition-colors">
+              <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -66,41 +66,34 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border">
-              <a
-                href="#home"
-                className="block px-3 py-2 text-foreground hover:text-secondary transition-colors"
+              <Link
+                to="/"
+                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </a>
-              <a
-                href="#collections"
-                className="block px-3 py-2 text-foreground hover:text-secondary transition-colors"
+              </Link>
+              <Link
+                to="/shop"
+                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Collections
-              </a>
+                Shop
+              </Link>
               <a
-                href="#about"
-                className="block px-3 py-2 text-foreground hover:text-secondary transition-colors"
+                href="/#about"
+                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </a>
-              <a
-                href="#testimonials"
-                className="block px-3 py-2 text-foreground hover:text-secondary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Reviews
-              </a>
-              <a
-                href="#contact"
-                className="block px-3 py-2 text-foreground hover:text-secondary transition-colors"
+              <Link
+                to="/contact"
+                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         )}

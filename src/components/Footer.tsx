@@ -1,4 +1,5 @@
 import { Instagram, Mail, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,13 +10,13 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-playfair font-bold">Ayanfe's Haven</h3>
             <p className="text-white/80 text-sm">
-              Creative fashion and bold expression through unique handmade pieces and trendy accessories.
+              Your one stop shop for fashion accessories and resins
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href="mailto:hello@ayanfeshaven.com" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -25,10 +26,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#collections" className="hover:text-white transition-colors">Collections</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition-colors">Reviews</a></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/shop" className="hover:text-white transition-colors">Shop</Link></li>
+              <li><a href="/#about" className="hover:text-white transition-colors">About</a></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -36,10 +37,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Shop</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li><a href="#" className="hover:text-white transition-colors">Sneakers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Resin Crafts</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Accessories</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">New Arrivals</a></li>
+              <li><Link to="/shop/sneakers" className="hover:text-white transition-colors">Sneakers</Link></li>
+              <li><Link to="/shop/resin-crafts" className="hover:text-white transition-colors">Resin Crafts</Link></li>
+              <li><Link to="/shop/accessories" className="hover:text-white transition-colors">Accessories</Link></li>
+              <li><Link to="/shop" className="hover:text-white transition-colors">All Products</Link></li>
             </ul>
           </div>
 
@@ -47,7 +48,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
               <li><a href="#" className="hover:text-white transition-colors">Shipping Info</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Returns</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Size Guide</a></li>

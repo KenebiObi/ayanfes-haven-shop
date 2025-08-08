@@ -9,26 +9,31 @@ import accessoriesImage from "@/assets/accessories-collection.jpg";
 const Collections = () => {
   const collections = [
     {
-      title: "Sneakers",
-      description: "Trendy and comfortable footwear that makes a statement.",
-      image: sneakersImage,
-      alt: "Collection of stylish sneakers",
-      featured: true,
-      path: "/shop/sneakers"
-    },
-    {
-      title: "Resin Crafts",
-      description: "Handmade unique pieces that showcase artistry and creativity.",
-      image: resinImage,
-      alt: "Beautiful handmade resin crafts and jewelry",
-      path: "/shop/resin-crafts"
-    },
-    {
-      title: "Accessories",
-      description: "Fashion-forward accessories to complete your bold look.",
+      title: "The Perfect Bag",
+      subtitle: "Style that defines you.",
+      description: "Shop our collection of stylish bags and accessories.",
       image: accessoriesImage,
-      alt: "Fashion accessories collection",
+      alt: "Collection of stylish bags and accessories",
+      cta: "SHOP BAGS",
       path: "/shop/accessories"
+    },
+    {
+      title: "Watches that Make a Statement",
+      subtitle: "Your time, your style.",
+      description: "Discover timepieces that complement your unique aesthetic.",
+      image: accessoriesImage,
+      alt: "Statement watches collection",
+      cta: "SHOP WATCHES",
+      path: "/shop/accessories"
+    },
+    {
+      title: "The Most Sought-After Brands",
+      subtitle: "Shop your favorite brands.",
+      description: "Premium sneakers and footwear from top brands.",
+      image: sneakersImage,
+      alt: "Collection of branded sneakers",
+      cta: "SHOP SHOES",
+      path: "/shop/sneakers"
     }
   ];
 
@@ -41,42 +46,40 @@ const Collections = () => {
             Featured Collections
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-            Explore our curated collections that blend creativity with style. Each piece is carefully selected to help you express your unique personality.
+            Discover our carefully curated collections of premium fashion and unique handmade pieces.
           </p>
         </div>
 
         {/* Collections Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {collections.map((collection, index) => (
             <Card 
               key={collection.title} 
-              className={`group overflow-hidden border-0 shadow-lg hover-lift bg-card ${collection.featured ? 'lg:col-span-2 lg:row-span-1' : ''}`}
+              className="group overflow-hidden border-0 shadow-lg hover-lift bg-card"
             >
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <img
                     src={collection.image}
                     alt={collection.alt}
-                    className={`w-full object-cover transition-transform duration-500 group-hover:scale-110 ${collection.featured ? 'h-80' : 'h-64'}`}
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                   
                   {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-2xl font-playfair font-bold mb-2">
+                    <h3 className="text-xl font-playfair font-bold mb-1">
                       {collection.title}
                     </h3>
-                    <p className="text-white/90 mb-4 text-balance">
-                      {collection.description}
+                    <p className="text-white/80 text-sm mb-4">
+                      {collection.subtitle}
                     </p>
                     <Link to={collection.path}>
                       <Button 
-                        variant="secondary" 
                         size="sm" 
-                        className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/30"
+                        className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
                       >
-                        Explore
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                        {collection.cta}
                       </Button>
                     </Link>
                   </div>
