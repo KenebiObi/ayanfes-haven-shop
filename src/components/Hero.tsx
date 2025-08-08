@@ -15,7 +15,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-foreground leading-tight">
               Creative fashion.
               <br />
-              <span className="text-primary">Bold expression.</span>
+              <span className="text-blue-200">Bold expression.</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-lg mx-auto lg:mx-0 text-balance">
