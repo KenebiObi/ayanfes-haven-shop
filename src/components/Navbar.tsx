@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ShoppingBag, Search, User } from "lucide-react";
+import { Menu, X, Search, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import Cart from "@/components/Cart";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,9 +46,7 @@ const Navbar = () => {
             <Button variant="ghost" size="icon">
               <User className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon">
-              <ShoppingBag className="h-5 w-5" />
-            </Button>
+            <Cart />
           </div>
 
           {/* Mobile menu button */}
