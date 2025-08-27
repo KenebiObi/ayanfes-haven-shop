@@ -38,7 +38,7 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
   };
 
   return (
-    <Card className={cn("group hover-lift bg-card border-border", className)}>
+    <Card className={cn("group hover-lift bg-card border-border rounded-sm", className)}>
       <CardContent className="p-0">
         <div className="relative overflow-hidden">
           <Link to={`/product/${product.id}`}>
