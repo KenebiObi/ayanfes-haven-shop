@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Heart, ShoppingCart } from 'lucide-react';
+import { Heart, ShoppingCart, Eye } from 'lucide-react';
 import { Product } from '@/types/product';
 import { useCart } from '@/contexts/CartContext';
 import { cn } from '@/lib/utils';
@@ -40,17 +41,26 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
     <Card className={cn("group hover-lift bg-card border-border", className)}>
       <CardContent className="p-0">
         <div className="relative overflow-hidden">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-          <button
-            onClick={() => setIsLiked(!isLiked)}
-            className="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors"
-          >
-            <Heart className={cn("h-5 w-5", isLiked ? "fill-red-500 text-red-500" : "text-muted-foreground")} />
-          </button>
+          <Link to={`/product/${product.id}`}>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </Link>
+          <div className="absolute top-4 right-4 flex gap-2">
+            <button
+              onClick={() => setIsLiked(!isLiked)}
+              className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+            >
+              <Heart className={cn("h-5 w-5", isLiked ? "fill-red-500 text-red-500" : "text-muted-foreground")} />
+            </button>
+            <Link to={`/product/${product.id}`}>
+              <button className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <Eye className="h-5 w-5 text-muted-foreground" />
+              </button>
+            </Link>
+          </div>
           {!product.inStock && (
             <Badge variant="secondary" className="absolute top-4 left-4">
               Out of Stock
@@ -60,9 +70,11 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
         
         <div className="p-6 space-y-4">
           <div>
-            <h3 className="text-xl font-playfair font-semibold text-foreground mb-2">
-              {product.name}
-            </h3>
+            <Link to={`/product/${product.id}`}>
+              <h3 className="text-xl font-playfair font-semibold text-foreground mb-2 hover:text-primary transition-colors">
+                {product.name}
+              </h3>
+            </Link>
             <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
               {product.description}
             </p>

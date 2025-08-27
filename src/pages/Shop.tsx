@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Grid3X3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -47,6 +47,18 @@ const Shop = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
               Discover our carefully curated collections of sneakers, handmade resin crafts, and fashion accessories.
             </p>
+          </div>
+        </section>
+
+        {/* View All Products Button */}
+        <section className="pb-8 hero-gradient">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <Link to="/shop/all">
+              <Button size="lg" className="mb-8">
+                <Grid3X3 className="mr-2 h-5 w-5" />
+                View All Products
+              </Button>
+            </Link>
           </div>
         </section>
 

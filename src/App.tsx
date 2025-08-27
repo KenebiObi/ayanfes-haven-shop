@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "@/contexts/CartContext";
 import Index from "./pages/Index";
 import Shop from "./pages/Shop";
+import AllProducts from "./pages/AllProducts";
+import ProductDetail from "./pages/ProductDetail";
 import Sneakers from "./pages/Sneakers";
 import ResinCrafts from "./pages/ResinCrafts";
 import Accessories from "./pages/Accessories";
@@ -25,6 +27,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/shop/all" element={<AllProducts />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/shop/sneakers" element={<Sneakers />} />
             <Route path="/shop/resin-crafts" element={<ResinCrafts />} />
             <Route path="/shop/accessories" element={<Accessories />} />
